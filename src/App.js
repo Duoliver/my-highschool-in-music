@@ -1,5 +1,7 @@
+import Main from "./pages/Main";
+
 function App() {
-  return <span>hello world</span>;
+  return <Main />;
 }
 
 export default App;
