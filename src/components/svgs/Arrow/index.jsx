@@ -1,6 +1,6 @@
 import React from "react";
 
-const Arrow = ({ color, point }) => {
+const Arrow = ({ point }) => {
   return (
     <svg
       width="15"
@@ -12,7 +12,7 @@ const Arrow = ({ color, point }) => {
       <path
         d="M7.25781 10.541L11.3154 0.125977H14.1133L8.57617 12.6357H6.8623L7.25781 10.541ZM3.68359 0.125977L7.8291 10.5703L8.13672 12.6357H6.4375L0.885742 0.125977H3.68359Z"
         transform={`rotate(${angles[point]}, 7.5, 7.5)`}
-        fill={color}
+        fill="currentColor"
       />
     </svg>
   );
@@ -26,7 +26,6 @@ const angles = {
 };
 
 Arrow.defaultProps = {
-  color: "black",
   point: "down",
 };
 

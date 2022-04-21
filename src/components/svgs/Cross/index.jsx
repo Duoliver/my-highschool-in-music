@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cross = ({ color }) => {
+const Cross = () => {
   return (
     <svg
       width="15"
@@ -11,14 +11,12 @@ const Cross = ({ color }) => {
     >
       <path
         d="M3.95508 0.150391L7.42676 5.92188L10.9424 0.150391H14.1211L8.93555 7.97266L14.2822 16H11.1475L7.48535 10.0527L3.82324 16H0.673828L6.00586 7.97266L0.834961 0.150391H3.95508Z"
-        fill={color}
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-Cross.defaultProps = {
-  color: "black",
-};
+Cross.defaultProps = {};
 
 export default Cross;
