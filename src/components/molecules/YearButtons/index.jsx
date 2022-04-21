@@ -14,7 +14,7 @@ const YearButtons = () => {
   return (
     <menu className="year-buttons">
       {Object.keys(years).map((year) => (
-        <SquareButton>{`\`${year}`}</SquareButton>
+        <SquareButton key={Math.random()}>{`\`${year}`}</SquareButton>
       ))}
     </menu>
   );
