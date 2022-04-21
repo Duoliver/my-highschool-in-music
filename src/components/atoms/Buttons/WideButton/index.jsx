@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { AlignEnum } from "../../../../enums";
 
 import { TitleThree } from "../../typography";
@@ -6,13 +6,20 @@ import { TitleThree } from "../../typography";
 import "./styles.scss";
 
 const WideButton = ({ onClick, children, disabled, compressed }) => {
+  const renderChildren = useCallback((children) => {
+    if (typeof children === "string") {
+      return <TitleThree align={AlignEnum.CENTER}>{children}</TitleThree>;
+    }
+    return children;
+  }, []);
+
   return (
     <button
       className={`wide-button ${compressed && "compressed"}`}
       onClick={onClick}
       disabled={disabled}
     >
-      <TitleThree align={AlignEnum.CENTER}>{children}</TitleThree>
+      {renderChildren(children)}
     </button>
   );
 };
