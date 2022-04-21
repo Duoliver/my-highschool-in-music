@@ -10,4 +10,20 @@
   &.align-justify {
     text-indent: 2em;
   }
+
+  &.text-margin {
+    margin-bottom: 15px;
+
+    .title-one + & {
+      margin-bottom: 40px;
+    }
+
+    .title-two + & {
+      margin-bottom: 30px;
+    }
+
+    .title-three + & {
+      margin-bottom: 20px;
+    }
+  }
 }

@@ -5,23 +5,27 @@
   font-size: 64px;
   line-height: 100%;
   letter-spacing: 0.42em;
-  text-indent: 0.21em;
+  margin-right: -0.42em;
+  -webkit-text-stroke-width: 2px;
 
-  &.align-left {
-    text-indent: 0;
+  &.small {
+    font-size: 40px;
+    -webkit-text-stroke-width: 1.5px;
+  }
+
+  &.text-margin {
+    margin-bottom: 40px;
   }
 
   &.bright {
     color: black;
     -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
   }
 
   &.dark {
     color: white;
     -webkit-text-fill-color: black;
-    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
   }
 }
