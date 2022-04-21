@@ -9,7 +9,7 @@ import "./styles.scss";
 
 const SquareButton = ({ onClick, children, disabled }) => {
   return (
-    <button class="square-button" onClick={onClick} disabled={disabled}>
+    <button className="square-button" onClick={onClick} disabled={disabled}>
       {children.split(" ").map((text) => (
         <TitleOne align={AlignEnum.CENTER}>{text}</TitleOne>
       ))}
