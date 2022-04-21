@@ -5,6 +5,11 @@
   font-size: 64px;
   line-height: 100%;
   letter-spacing: 0.42em;
+  text-indent: 0.21em;
+
+  &.align-left {
+    text-indent: 0;
+  }
 
   &.bright {
     color: black;
