@@ -6,4 +6,8 @@
   font-size: 16px;
   line-height: 150%;
   color: black;
+
+  &.align-justify {
+    text-indent: 2em;
+  }
 }
