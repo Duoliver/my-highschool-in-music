@@ -6,6 +6,7 @@ import {
   TitleThree,
   TitleTwo,
 } from "../../components/atoms/typography";
+import { YearButtons } from "../../components/molecules";
 import { Arrow, LogoPortuguese } from "../../components/svgs";
 import { AlignEnum } from "../../enums";
 
@@ -17,7 +18,7 @@ const Main = () => {
   };
 
   return (
-    <div className="main">
+    <main>
       <section className="splash">
         <div />
         <LogoPortuguese />
@@ -58,8 +59,11 @@ const Main = () => {
             accusantium labore? Sunt aliquam beatae pariatur.
           </Text>
         </div>
+        <div className="content">
+          <YearButtons />
+        </div>
       </section>
-    </div>
+    </main>
   );
 };
 

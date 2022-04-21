@@ -8,9 +8,14 @@
   margin-right: -0.42em;
   -webkit-text-stroke-width: 2px;
 
+  @media screen and (max-width: 400px) {
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+  }
+
   &.small {
     font-size: 40px;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 1px;
   }
 
   &.text-margin {

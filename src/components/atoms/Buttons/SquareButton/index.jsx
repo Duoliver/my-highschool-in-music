@@ -11,7 +11,9 @@ const SquareButton = ({ onClick, children, disabled }) => {
   return (
     <button className="square-button" onClick={onClick} disabled={disabled}>
       {children.split(" ").map((text) => (
-        <TitleOne align={AlignEnum.CENTER}>{text}</TitleOne>
+        <TitleOne align={AlignEnum.CENTER} small>
+          {text}
+        </TitleOne>
       ))}
     </button>
   );
