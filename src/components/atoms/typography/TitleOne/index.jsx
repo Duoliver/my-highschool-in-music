@@ -4,7 +4,7 @@ import "./styles.scss";
 const TitleOne = ({ children, align, textMargin, small }) => {
   return (
     <span
-      className={`title-one bright ${align} ${textMargin && "text-margin"} ${
+      className={`title-one ${align} ${textMargin && "text-margin"} ${
         small && "small"
       }`}
     >

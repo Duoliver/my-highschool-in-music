@@ -3,7 +3,7 @@ import { SquareButton } from "../../atoms/Buttons";
 
 import "./styles.scss";
 
-const YearButtons = () => {
+const YearButtons = (current) => {
   const years = {
     17: "link",
     18: "link",
@@ -14,7 +14,10 @@ const YearButtons = () => {
   return (
     <menu className="year-buttons">
       {Object.keys(years).map((year) => (
-        <SquareButton key={Math.random()}>{`\`${year}`}</SquareButton>
+        <SquareButton
+          disabled={current === year}
+          key={Math.random()}
+        >{`\`${year}`}</SquareButton>
       ))}
     </menu>
   );

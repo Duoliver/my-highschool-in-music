@@ -10,6 +10,17 @@ button {
   cursor: pointer;
 }
 
+button:hover:not([disabled]) {
+  background-color: black;
+  & > * {
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-color: white;
+  }
+  svg {
+    color: white;
+  }
+}
+
 button:disabled,
 button[disabled] {
   opacity: 0.5;

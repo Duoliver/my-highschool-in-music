@@ -8,6 +8,10 @@
   margin-right: -0.42em;
   -webkit-text-stroke-width: 2px;
 
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: black;
+
   @media screen and (max-width: 400px) {
     font-size: 40px;
     -webkit-text-stroke-width: 1px;
@@ -20,17 +24,5 @@
 
   &.text-margin {
     margin-bottom: 40px;
-  }
-
-  &.bright {
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-color: black;
-  }
-
-  &.dark {
-    color: white;
-    -webkit-text-fill-color: black;
-    -webkit-text-stroke-color: white;
   }
 }
