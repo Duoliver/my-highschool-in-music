@@ -1,24 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { SquareButton } from "../../atoms/Buttons";
 
 import "./styles.scss";
 
-const YearButtons = (current) => {
-  const years = {
-    17: "link",
-    18: "link",
-    19: "link",
-    20: "link",
-  };
+const YearButtons = ({ current }) => {
+  const navigate = useNavigate();
+
+  const years = [17, 18, 19, 20];
 
   return (
     <menu className="year-buttons">
-      {Object.keys(years).map((year) => (
-        <SquareButton
-          disabled={current === year}
-          key={Math.random()}
-        >{`\`${year}`}</SquareButton>
-      ))}
+      {years.map((year) => {
+        return (
+          <SquareButton
+            disabled={current === year}
+            key={Math.random()}
+            onClick={() => navigate(`/year/${year}`)}
+          >
+            {`\`${year}`}
+          </SquareButton>
+        );
+      })}
     </menu>
   );
 };
