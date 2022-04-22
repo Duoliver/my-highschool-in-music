@@ -4,9 +4,9 @@ import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
 import { YearButtons } from "../../components/molecules";
 import { AlignEnum } from "../../enums";
 import database from "../../database";
+import { YearData } from "../../database/classes";
 
 import "./styles.scss";
-import { YearData } from "../../database/classes";
 
 const Year = () => {
   const { yearId } = useParams();
@@ -23,18 +23,23 @@ const Year = () => {
     <main className="year">
       <section className="info">
         <div className="content">
-          <TitleOne align={AlignEnum.RIGHT} textMargin>
-            {data.year}
-          </TitleOne>
-          <TitleTwo align={AlignEnum.RIGHT} textMargin>
-            {data.title}
-          </TitleTwo>
-          <Text align={AlignEnum.JUSTIFY} textMargin>
-            {data.text}
-          </Text>
-        </div>
-        <div className="content">
-          <YearButtons current={yearId} />
+          <div className="left"></div>
+          <div className="right">
+            <div>
+              <TitleOne align={AlignEnum.RIGHT} textMargin>
+                {data.year}
+              </TitleOne>
+              <TitleTwo align={AlignEnum.RIGHT} textMargin>
+                {data.title}
+              </TitleTwo>
+              <Text align={AlignEnum.JUSTIFY} textMargin>
+                {data.text}
+              </Text>
+            </div>
+            <div>
+              <YearButtons current={yearId} />
+            </div>
+          </div>
         </div>
       </section>
     </main>
