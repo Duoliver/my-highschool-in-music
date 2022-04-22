@@ -15,7 +15,7 @@ const YearButtons = ({ current }) => {
       {years.map((year) => {
         return (
           <SquareButton
-            disabled={current === year}
+            disabled={Number(current) === year}
             key={Math.random()}
             onClick={() => navigate(`/year/${year}`)}
           >
