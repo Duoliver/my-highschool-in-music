@@ -35,28 +35,7 @@ const Main = () => {
             O QUÊ?
           </TitleTwo>
           <Text align={AlignEnum.JUSTIFY} textMargin>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, obcaecati culpa. Modi, optio amet assumenda error
-            possimus, corrupti natus eius voluptates eligendi sunt, at
-            accusantium labore? Sunt aliquam beatae pariatur.
-          </Text>
-          <TitleTwo align={AlignEnum.RIGHT} textMargin>
-            AGORA VAI
-          </TitleTwo>
-          <Text align={AlignEnum.JUSTIFY} textMargin>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, obcaecati culpa. Modi, optio amet assumenda error
-            possimus, corrupti natus eius voluptates eligendi sunt, at
-            accusantium labore? Sunt aliquam beatae pariatur.
-          </Text>
-          <TitleThree align={AlignEnum.RIGHT} textMargin>
-            SERÁ QUE FOI?
-          </TitleThree>
-          <Text align={AlignEnum.JUSTIFY} textMargin>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, obcaecati culpa. Modi, optio amet assumenda error
-            possimus, corrupti natus eius voluptates eligendi sunt, at
-            accusantium labore? Sunt aliquam beatae pariatur.
+            Ainda em desenvolvimento.
           </Text>
         </div>
         <div className="content">
