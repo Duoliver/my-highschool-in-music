@@ -1,11 +1,6 @@
 import React from "react";
 import { WideButton } from "../../components/atoms/Buttons";
-import {
-  Text,
-  TitleOne,
-  TitleThree,
-  TitleTwo,
-} from "../../components/atoms/typography";
+import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
 import { YearButtons } from "../../components/molecules";
 import { Arrow, LogoPortuguese } from "../../components/svgs";
 import { AlignEnum } from "../../enums";
