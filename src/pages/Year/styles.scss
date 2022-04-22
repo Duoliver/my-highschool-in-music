@@ -20,14 +20,27 @@ main.year {
       }
 
       & > .left {
-        flex: 2;
+        width: 100%;
+        flex: 1;
       }
 
       & > .right {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex: 3;
+        flex: 1;
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+
+        & > .left {
+          order: 2;
+        }
+
+        & > .right {
+          order: 1;
+        }
       }
     }
   }
