@@ -7,6 +7,7 @@ import database from "../../database";
 import { YearData } from "../../database/classes";
 
 import "./styles.scss";
+import AlbumCover from "../../components/atoms/AlbumCover";
 
 const Year = () => {
   const { yearId } = useParams();
@@ -23,7 +24,9 @@ const Year = () => {
     <main className="year">
       <section className="info">
         <div className="content">
-          <div className="left"></div>
+          <div className="left">
+            <AlbumCover src={data.albums[0]?.artworkUrl} />
+          </div>
           <div className="right">
             <div>
               <TitleOne align={AlignEnum.RIGHT} textMargin>
