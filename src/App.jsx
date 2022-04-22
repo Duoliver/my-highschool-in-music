@@ -1,9 +1,13 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
 
 function App() {
   return (
     <section>
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
     </section>
   );
 }
