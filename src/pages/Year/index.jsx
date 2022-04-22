@@ -1,18 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
-import { YearButtons } from "../../components/molecules";
+import { Collage, YearButtons } from "../../components/molecules";
 import { AlignEnum } from "../../enums";
-import database from "../../database";
 import { YearData } from "../../database/classes";
+import database from "../../database";
 
 import "./styles.scss";
-import AlbumCover from "../../components/atoms/AlbumCover";
 
 const Year = () => {
   const { yearId } = useParams();
 
   const [data, setData] = useState(new YearData("", "", "", []));
+
+  const getMainArtwork = useCallback(() => {
+    return data.albums[0]?.artworkUrl;
+  }, [data.albums]);
+
+  const getMediumArtworks = useCallback(() => {
+    return [data.albums[1]?.artworkUrl, data.albums[2]?.artworkUrl];
+  }, [data.albums]);
+
+  const getSmallArtworks = useCallback(() => {
+    return data.albums.slice(3, 11).map((album) => album.artworkUrl);
+  }, [data.albums]);
 
   useEffect(() => {
     if (yearId) {
@@ -25,7 +36,13 @@ const Year = () => {
       <section className="info">
         <div className="content">
           <div className="left">
-            <AlbumCover src={data.albums[0]?.artworkUrl} />
+            {data.albums?.length && (
+              <Collage
+                main={getMainArtwork()}
+                medium={getMediumArtworks()}
+                small={getSmallArtworks()}
+              />
+            )}
           </div>
           <div className="right">
             <div>
