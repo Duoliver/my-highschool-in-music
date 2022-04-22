@@ -1,0 +1,29 @@
+.text {
+  position: relative;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: black;
+
+  &.align-justify {
+    text-indent: 2em;
+  }
+
+  &.text-margin {
+    margin-bottom: 15px;
+
+    .title-one + & {
+      margin-bottom: 40px;
+    }
+
+    .title-two + & {
+      margin-bottom: 30px;
+    }
+
+    .title-three + & {
+      margin-bottom: 20px;
+    }
+  }
+}

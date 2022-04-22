@@ -1,0 +1,10 @@
+@use "../styles.scss";
+
+.wide-button {
+  width: 100%;
+  height: 50px;
+
+  &.compressed {
+    height: 30px;
+  }
+}

@@ -1,0 +1,28 @@
+.title-one {
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0.42em;
+  margin-right: -0.42em;
+  -webkit-text-stroke-width: 2px;
+
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: black;
+
+  @media screen and (max-width: 400px) {
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  &.small {
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  &.text-margin {
+    margin-bottom: 40px;
+  }
+}
