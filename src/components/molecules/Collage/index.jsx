@@ -19,10 +19,12 @@ const Collage = ({ albums, onClick }) => {
   }, [albums]);
 
   const mapLesserAlbums = (firstIndex) => {
-    return ({ artworkUrl }, index) => (
+    return ({ artworkUrl, artist, name }, index) => (
       <AlbumCover
         key={Math.random()}
         src={artworkUrl}
+        artist={artist}
+        name={name}
         onClick={() => onClick(index + firstIndex)}
       />
     );
@@ -32,6 +34,8 @@ const Collage = ({ albums, onClick }) => {
     <div className="collage">
       <AlbumCover
         src={getMainAlbum()?.artworkUrl}
+        artist={getMainAlbum()?.artist}
+        name={getMainAlbum()?.name}
         onClick={() => onClick(0)}
       ></AlbumCover>
       <div className="medium">{getMediumAlbums().map(mapLesserAlbums(1))}</div>

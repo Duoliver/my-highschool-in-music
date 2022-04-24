@@ -2,7 +2,7 @@ import React from "react";
 
 import "./styles.scss";
 
-const AlbumCover = ({ src, onClick }) => {
+const AlbumCover = ({ src, onClick, artist, name }) => {
   const albumProps = {
     className: "album-cover",
     style: {
@@ -11,9 +11,20 @@ const AlbumCover = ({ src, onClick }) => {
   };
 
   if (onClick) {
-    return <button {...albumProps} onClick={onClick}></button>;
+    return (
+      <button
+        title={`${artist} - ${name}`}
+        {...albumProps}
+        onClick={onClick}
+      ></button>
+    );
   }
   return <div {...albumProps} />;
+};
+
+AlbumCover.defaultProps = {
+  artist: "",
+  name: "",
 };
 
 export default AlbumCover;
