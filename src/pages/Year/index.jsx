@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
 import { Collage, YearButtons } from "../../components/molecules";
@@ -8,15 +8,21 @@ import database from "../../database";
 import { isFirefox } from "../../utils";
 
 import "./styles.scss";
+import Modal from "../../components/atoms/Modal";
 
 const Year = () => {
   const { yearId } = useParams();
 
   const [data, setData] = useState(new YearData("", "", "", []));
+  const [showModal, setShowModal] = useState(false);
 
-  const handleOpenModal = useCallback((index) => {
-    return index;
-  }, []);
+  const handleOpenModal = (index) => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     if (yearId) {
@@ -55,6 +61,7 @@ const Year = () => {
           </div>
         </div>
       </section>
+      {showModal && <Modal onClose={handleCloseModal} />}
     </main>
   );
 };
