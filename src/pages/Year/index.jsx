@@ -14,17 +14,9 @@ const Year = () => {
 
   const [data, setData] = useState(new YearData("", "", "", []));
 
-  const getMainArtwork = useCallback(() => {
-    return data.albums[0]?.artworkUrl;
-  }, [data.albums]);
-
-  const getMediumArtworks = useCallback(() => {
-    return [data.albums[1]?.artworkUrl, data.albums[2]?.artworkUrl];
-  }, [data.albums]);
-
-  const getSmallArtworks = useCallback(() => {
-    return data.albums.slice(3, 11).map((album) => album.artworkUrl);
-  }, [data.albums]);
+  const handleOpenModal = useCallback((index) => {
+    return index;
+  }, []);
 
   useEffect(() => {
     if (yearId) {
@@ -39,9 +31,8 @@ const Year = () => {
           <div className="collage-wrapper">
             {data.albums?.length && (
               <Collage
-                main={getMainArtwork()}
-                medium={getMediumArtworks()}
-                small={getSmallArtworks()}
+                albums={data.albums}
+                onClick={(i) => handleOpenModal(i)}
               />
             )}
           </div>
