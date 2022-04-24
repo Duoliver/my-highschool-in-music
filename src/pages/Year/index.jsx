@@ -5,6 +5,7 @@ import { Collage, YearButtons } from "../../components/molecules";
 import { AlignEnum } from "../../enums";
 import { YearData } from "../../database/classes";
 import database from "../../database";
+import { isFirefox } from "../../utils";
 
 import "./styles.scss";
 
@@ -45,7 +46,7 @@ const Year = () => {
             )}
           </div>
           <div className="text-wrapper">
-            <TitleOne align={AlignEnum.RIGHT} textMargin>
+            <TitleOne breakWord={isFirefox} align={AlignEnum.RIGHT} textMargin>
               {data.year}
             </TitleOne>
             <TitleTwo align={AlignEnum.RIGHT} textMargin>
