@@ -46,6 +46,9 @@ const Year = () => {
             <Text align={AlignEnum.JUSTIFY} textMargin>
               {data.text}
             </Text>
+            <Text className="album-hint" textMargin>
+              Clique em um disco para saber mais sobre
+            </Text>
           </div>
           <div className="years-wrapper">
             <YearButtons current={yearId} />
