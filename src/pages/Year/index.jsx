@@ -35,7 +35,7 @@ const Year = () => {
     <main className="year">
       <section className="info">
         <div className="content">
-          <div className="left">
+          <div className="collage-wrapper">
             {data.albums?.length && (
               <Collage
                 main={getMainArtwork()}
@@ -44,21 +44,19 @@ const Year = () => {
               />
             )}
           </div>
-          <div className="right">
-            <div>
-              <TitleOne align={AlignEnum.RIGHT} textMargin>
-                {data.year}
-              </TitleOne>
-              <TitleTwo align={AlignEnum.RIGHT} textMargin>
-                {data.title}
-              </TitleTwo>
-              <Text align={AlignEnum.JUSTIFY} textMargin>
-                {data.text}
-              </Text>
-            </div>
-            <div>
-              <YearButtons current={yearId} />
-            </div>
+          <div className="text-wrapper">
+            <TitleOne align={AlignEnum.RIGHT} textMargin>
+              {data.year}
+            </TitleOne>
+            <TitleTwo align={AlignEnum.RIGHT} textMargin>
+              {data.title}
+            </TitleTwo>
+            <Text align={AlignEnum.JUSTIFY} textMargin>
+              {data.text}
+            </Text>
+          </div>
+          <div className="years-wrapper">
+            <YearButtons current={yearId} />
           </div>
         </div>
       </section>
