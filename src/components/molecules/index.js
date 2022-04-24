@@ -1,3 +1,4 @@
+import Collage from "./Collage";
 import YearButtons from "./YearButtons";
 
-export { YearButtons };
+export { YearButtons, Collage };

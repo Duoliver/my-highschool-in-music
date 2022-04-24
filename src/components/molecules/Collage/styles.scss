@@ -1,0 +1,18 @@
+.collage {
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    width: 100%;
+  }
+
+  & > div.medium {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & > div.small {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

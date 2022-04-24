@@ -1,0 +1,56 @@
+main.year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  & > section.info {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    & > .content {
+      display: grid;
+      flex: 1;
+      gap: 30px;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        "collage text"
+        "collage years";
+
+      & > .collage-wrapper {
+        grid-area: collage;
+      }
+
+      & > .text-wrapper {
+        grid-area: text;
+      }
+
+      & > .years-wrapper {
+        grid-area: years;
+        align-self: end;
+      }
+
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas:
+          "collage text"
+          "years years";
+      }
+
+      @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+          "text"
+          "collage"
+          "years";
+      }
+    }
+  }
+}

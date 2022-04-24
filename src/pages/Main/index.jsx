@@ -13,7 +13,7 @@ const Main = () => {
   };
 
   return (
-    <main>
+    <main className="main">
       <section className="splash">
         <div />
         <LogoPortuguese />

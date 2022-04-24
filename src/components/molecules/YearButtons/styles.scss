@@ -1,10 +1,16 @@
 .year-buttons {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  @media screen and (min-width: 600px) {
-    gap: 30px;
+  @media screen and (max-width: 600px) {
+    justify-content: space-between;
+    gap: calc((100vw - 360px) / 2) 0px;
+  }
+
+  @media screen and (max-width: 360px) {
+    justify-content: flex-end;
+    gap: 10px;
   }
 }
