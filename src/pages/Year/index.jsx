@@ -8,7 +8,7 @@ import database from "../../database";
 import { isFirefox } from "../../utils";
 
 import "./styles.scss";
-import Modal from "../../components/atoms/Modal";
+import AlbumModal from "../../components/organisms/AlbumModal";
 
 const Year = () => {
   const { yearId } = useParams();
@@ -61,7 +61,7 @@ const Year = () => {
           </div>
         </div>
       </section>
-      {showModal && <Modal onClose={handleCloseModal} />}
+      {showModal && <AlbumModal title={data.year} onClose={handleCloseModal} />}
     </main>
   );
 };
