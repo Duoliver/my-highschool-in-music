@@ -22,7 +22,6 @@
     background-color: white;
     height: 100%;
     width: 100%;
-    // overflow-y: auto;
 
     & > .modal-content-header {
       display: flex;
@@ -36,8 +35,9 @@
 
     & > .modal-content-main {
       flex: 1;
+      overflow-y: scroll;
       & > div {
-        overflow-y: scroll;
+        max-height: 100%;
       }
     }
   }
