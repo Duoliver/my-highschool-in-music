@@ -1,6 +1,59 @@
 .album-modal {
   height: 100%;
   width: 100%;
-  background-color: black;
   display: grid;
+
+  grid-template-areas:
+    "artwork data"
+    "artwork text"
+    "play text"
+    ". text";
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+
+  grid-template-rows: repeat(4, min-content);
+
+  & > .artwork-area {
+    grid-area: artwork;
+    width: 100%;
+  }
+
+  & > .data-area {
+    grid-area: data;
+  }
+
+  & > .play-area {
+    grid-area: play;
+  }
+
+  & > .text-area {
+    grid-area: text;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-areas:
+      "artwork data"
+      "artwork play"
+      "text text";
+
+    row-gap: 30px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-areas:
+      "artwork data"
+      "play play"
+      "text text";
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-areas:
+      "artwork"
+      "data"
+      "play"
+      "text";
+    grid-template-columns: 1fr;
+  }
 }

@@ -15,8 +15,10 @@ const Year = () => {
 
   const [data, setData] = useState(new YearData("", "", "", []));
   const [showModal, setShowModal] = useState(false);
+  const [selectedAlbumIndex, setSelectedAlbumIndex] = useState(null);
 
   const handleOpenModal = (index) => {
+    setSelectedAlbumIndex(index);
     setShowModal(true);
   };
 
@@ -61,7 +63,13 @@ const Year = () => {
           </div>
         </div>
       </section>
-      {showModal && <AlbumModal title={data.year} onClose={handleCloseModal} />}
+      {showModal && (
+        <AlbumModal
+          title={data.year}
+          onClose={handleCloseModal}
+          album={data.albums[selectedAlbumIndex]}
+        />
+      )}
     </main>
   );
 };
