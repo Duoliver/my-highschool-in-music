@@ -5,8 +5,14 @@ import { SmallButton } from "../Buttons";
 import "./styles.scss";
 
 const Modal = ({ title, children, onClose }) => {
+  const onClickModal = (event) => {
+    if (event.target.id === "outer") {
+      onClose();
+    }
+  };
+
   return (
-    <div className="modal-outer" onClick={onClose}>
+    <div className="modal-outer" id="outer" onClick={onClickModal}>
       <div className="modal-content content">
         <div className="modal-content-header default-padding">
           {title}
