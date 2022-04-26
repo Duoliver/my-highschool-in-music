@@ -55,5 +55,14 @@
       "play"
       "text";
     grid-template-columns: 1fr;
+    gap: 15px;
+
+    & > .data-area {
+      margin-top: 15px;
+    }
+
+    & > .play-area {
+      margin: 15px 0;
+    }
   }
 }
