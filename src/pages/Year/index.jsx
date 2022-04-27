@@ -67,7 +67,9 @@ const Year = () => {
         <AlbumModal
           title={data.year}
           onClose={handleCloseModal}
-          album={data.albums[selectedAlbumIndex]}
+          albums={data.albums}
+          currentIndex={selectedAlbumIndex}
+          setCurrentIndex={setSelectedAlbumIndex}
         />
       )}
     </main>

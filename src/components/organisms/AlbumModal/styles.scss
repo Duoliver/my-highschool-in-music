@@ -7,7 +7,8 @@
     "artwork data"
     "artwork text"
     "play text"
-    ". text";
+    ". text"
+    "page page";
   grid-template-columns: 300px 1fr;
   gap: 30px;
 
@@ -30,11 +31,17 @@
     grid-area: text;
   }
 
+  & > .page-area {
+    grid-area: page;
+    align-self: end;
+  }
+
   @media screen and (max-width: 900px) {
     grid-template-areas:
       "artwork data"
       "artwork play"
-      "text text";
+      "text text"
+      "page page";
 
     row-gap: 30px;
 
@@ -45,7 +52,8 @@
     grid-template-areas:
       "artwork data"
       "play play"
-      "text text";
+      "text text"
+      "page page";
   }
 
   @media screen and (max-width: 600px) {
@@ -53,7 +61,8 @@
       "artwork"
       "data"
       "play"
-      "text";
+      "text"
+      "page";
     grid-template-columns: 1fr;
     gap: 15px;
 
