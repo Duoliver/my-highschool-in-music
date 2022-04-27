@@ -41,6 +41,11 @@
       display: flex;
       justify-content: center;
       width: 100%;
+
+      & > .default-padding {
+        height: fit-content;
+        min-height: 100%;
+      }
     }
   }
 
