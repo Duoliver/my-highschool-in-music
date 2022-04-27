@@ -53,7 +53,7 @@ const AlbumModal = ({
         </div>
         <div className="text-area">
           {album.text.split("\n").map((paragraph) => (
-            <Text align={AlignEnum.JUSTIFY} textMargin>
+            <Text align={AlignEnum.JUSTIFY} key={Math.random()} textMargin>
               {paragraph}
             </Text>
           ))}
