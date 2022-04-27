@@ -49,7 +49,7 @@ const AlbumModal = ({
           </Text>
         </div>
         <div className="play-area">
-          <WideButton>REPRODUZIR</WideButton>
+          <WideButton disabled>REPRODUZIR</WideButton>
         </div>
         <div className="text-area">
           {album.text.split("\n").map((paragraph) => (

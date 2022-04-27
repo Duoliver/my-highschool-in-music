@@ -12,9 +12,12 @@ button {
 
 button:hover:not([disabled]) {
   background-color: black;
-  & > * {
+  & > .title-one {
     -webkit-text-fill-color: black;
     -webkit-text-stroke-color: white;
+  }
+  & > span {
+    color: white;
   }
   svg {
     color: white;
