@@ -4,18 +4,19 @@ import "./styles.scss";
 
 const TitleTwo = ({ children, align, textMargin, uppercase }) => {
   return (
-    <div
+    <span
       className={`title-two ${align} ${textMargin && "text-margin"} ${
         uppercase && "uppercase"
       }`}
     >
       {children}
-    </div>
+    </span>
   );
 };
 
 TitleTwo.defaultProps = {
   align: AlignEnum.LEFT,
+  uppercase: false,
   textMargin: false,
 };
 
