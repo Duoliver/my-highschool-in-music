@@ -1,15 +1,28 @@
-import React from "react";
+import React, { forwardRef, useImperativeHandle } from "react";
 import { SmallButtonVariantEnum } from "../../../enums";
 import { SmallButton } from "../Buttons";
 
 import "./styles.scss";
 
-const Modal = ({ title, children, onClose }) => {
+const Modal = ({ title, children, onClose }, ref) => {
   const onClickModal = (event) => {
     if (event.target.id === "outer") {
       onClose();
     }
   };
+
+  const scrollContentToTop = () => {
+    const content = document.getElementById("modal-content");
+    content.scrollTop = 0;
+  };
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      scrollContentToTop,
+    }),
+    []
+  );
 
   return (
     <div className="modal-outer" id="outer" onClick={onClickModal}>
@@ -21,7 +34,7 @@ const Modal = ({ title, children, onClose }) => {
             onClick={onClose}
           />
         </div>
-        <div className="modal-content-main">
+        <div className="modal-content-main" id="modal-content">
           <div className="default-padding">{children}</div>
         </div>
       </div>
@@ -29,4 +42,4 @@ const Modal = ({ title, children, onClose }) => {
   );
 };
 
-export default Modal;
+export default forwardRef(Modal);

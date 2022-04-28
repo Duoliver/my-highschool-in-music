@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { AlignEnum } from "../../../enums";
 import { isFirefox } from "../../../utils";
 import AlbumCover from "../../atoms/AlbumCover";
@@ -17,12 +17,19 @@ const AlbumModal = ({
   currentIndex,
   setCurrentIndex,
 }) => {
+  const modalRef = useRef(null);
+
   const album = albums[currentIndex] || {};
 
   const formatAlbumName = (album) => {
     if (!album) return "";
 
     return `${album.name} (${album.year})`;
+  };
+
+  const handleCurrentIndexSet = (index) => {
+    modalRef.current.scrollContentToTop();
+    setCurrentIndex(index);
   };
 
   return (
@@ -33,6 +40,7 @@ const AlbumModal = ({
         </TitleOne>
       }
       onClose={onClose}
+      ref={modalRef}
     >
       <div className="album-modal">
         <div className="artwork-area">
@@ -61,10 +69,8 @@ const AlbumModal = ({
           <TitleThree align={AlignEnum.LEFT}>MINHAS FAVORITAS</TitleThree>
           <List>
             {album.favouriteSongs.map((song) => (
-              <li>
-                <Text align={AlignEnum.LEFT} key={Math.random()}>
-                  {song}
-                </Text>
+              <li key={Math.random()}>
+                <Text align={AlignEnum.LEFT}>{song}</Text>
               </li>
             ))}
           </List>
@@ -74,7 +80,7 @@ const AlbumModal = ({
             previousItemName={formatAlbumName(albums[currentIndex - 1])}
             nextItemName={formatAlbumName(albums[currentIndex + 1])}
             currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
+            setCurrentIndex={handleCurrentIndexSet}
             limit={albums.length}
           />
         </div>
