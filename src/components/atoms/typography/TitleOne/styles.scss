@@ -27,4 +27,8 @@
   &.break-word {
     word-break: break-all;
   }
+
+  .text + &.text-margin {
+    margin-top: 32px;
+  }
 }
