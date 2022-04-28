@@ -3,6 +3,7 @@ import { AlignEnum } from "../../../enums";
 import { isFirefox } from "../../../utils";
 import AlbumCover from "../../atoms/AlbumCover";
 import { WideButton } from "../../atoms/Buttons";
+import List from "../../atoms/List";
 import Modal from "../../atoms/Modal";
 import { Text, TitleOne, TitleThree, TitleTwo } from "../../atoms/typography";
 import { Paginator } from "../../molecules";
@@ -57,6 +58,16 @@ const AlbumModal = ({
               {paragraph}
             </Text>
           ))}
+          <TitleThree align={AlignEnum.LEFT}>MINHAS FAVORITAS</TitleThree>
+          <List>
+            {album.favouriteSongs.map((song) => (
+              <li>
+                <Text align={AlignEnum.LEFT} key={Math.random()}>
+                  {song}
+                </Text>
+              </li>
+            ))}
+          </List>
         </div>
         <div className="page-area">
           <Paginator

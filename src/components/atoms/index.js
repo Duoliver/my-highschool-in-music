@@ -1,5 +1,6 @@
 import AlbumCover from "./AlbumCover";
 import { SmallButton, SquareButton, WideButton } from "./Buttons";
+import List from "./List";
 import Modal from "./Modal";
 import { Credits, Text, TitleOne, TitleTwo, TitleThree } from "./typography";
 
@@ -14,4 +15,5 @@ export {
   TitleOne,
   TitleTwo,
   TitleThree,
+  List,
 };
