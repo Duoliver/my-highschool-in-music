@@ -24,6 +24,24 @@ main {
   }
 }
 
+.text-margin {
+  &.title-one + * {
+    margin-top: 32px;
+  }
+
+  &.title-two + * {
+    margin-top: 12px;
+  }
+
+  &.title-three + * {
+    margin-top: 10px;
+  }
+
+  &.text + * {
+    margin-top: 6px;
+  }
+}
+
 .content {
   max-width: 1000px;
   width: 100%;
