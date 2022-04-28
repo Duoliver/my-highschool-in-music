@@ -1,0 +1,33 @@
+.paginator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  & > .paginator-buttons {
+    display: flex;
+    align-items: center;
+
+    & > .paginator-buttons-index {
+      width: 64px;
+    }
+  }
+
+  & > .paginator-spoiler {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    width: 100%;
+
+    & > span {
+      opacity: 0.5;
+      flex: 1;
+      word-break: break-word;
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 16px;
+    }
+  }
+}

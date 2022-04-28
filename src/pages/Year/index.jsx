@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
 import { Collage, YearButtons } from "../../components/molecules";
@@ -8,23 +8,23 @@ import database from "../../database";
 import { isFirefox } from "../../utils";
 
 import "./styles.scss";
+import AlbumModal from "../../components/organisms/AlbumModal";
 
 const Year = () => {
   const { yearId } = useParams();
 
   const [data, setData] = useState(new YearData("", "", "", []));
+  const [showModal, setShowModal] = useState(false);
+  const [selectedAlbumIndex, setSelectedAlbumIndex] = useState(null);
 
-  const getMainArtwork = useCallback(() => {
-    return data.albums[0]?.artworkUrl;
-  }, [data.albums]);
+  const handleOpenModal = (index) => {
+    setSelectedAlbumIndex(index);
+    setShowModal(true);
+  };
 
-  const getMediumArtworks = useCallback(() => {
-    return [data.albums[1]?.artworkUrl, data.albums[2]?.artworkUrl];
-  }, [data.albums]);
-
-  const getSmallArtworks = useCallback(() => {
-    return data.albums.slice(3, 11).map((album) => album.artworkUrl);
-  }, [data.albums]);
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     if (yearId) {
@@ -39,9 +39,8 @@ const Year = () => {
           <div className="collage-wrapper">
             {data.albums?.length && (
               <Collage
-                main={getMainArtwork()}
-                medium={getMediumArtworks()}
-                small={getSmallArtworks()}
+                albums={data.albums}
+                onClick={(i) => handleOpenModal(i)}
               />
             )}
           </div>
@@ -55,12 +54,24 @@ const Year = () => {
             <Text align={AlignEnum.JUSTIFY} textMargin>
               {data.text}
             </Text>
+            <Text className="album-hint" textMargin>
+              Clique em um disco para saber mais sobre
+            </Text>
           </div>
           <div className="years-wrapper">
             <YearButtons current={yearId} />
           </div>
         </div>
       </section>
+      {showModal && (
+        <AlbumModal
+          title={data.year}
+          onClose={handleCloseModal}
+          albums={data.albums}
+          currentIndex={selectedAlbumIndex}
+          setCurrentIndex={setSelectedAlbumIndex}
+        />
+      )}
     </main>
   );
 };

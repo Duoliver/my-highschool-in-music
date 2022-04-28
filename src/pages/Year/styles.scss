@@ -50,6 +50,10 @@ main.year {
           "text"
           "collage"
           "years";
+
+        & > .text-wrapper {
+          text-align: center;
+        }
       }
     }
   }
