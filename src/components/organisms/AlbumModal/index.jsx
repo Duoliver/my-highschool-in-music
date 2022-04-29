@@ -66,7 +66,9 @@ const AlbumModal = ({
               {paragraph}
             </Text>
           ))}
-          <TitleThree align={AlignEnum.LEFT}>MINHAS FAVORITAS</TitleThree>
+          <TitleThree align={AlignEnum.LEFT} textMargin>
+            MINHAS FAVORITAS
+          </TitleThree>
           <List>
             {album.favouriteSongs.map((song) => (
               <li key={Math.random()}>

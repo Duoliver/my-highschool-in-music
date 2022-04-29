@@ -24,37 +24,29 @@ main {
   }
 }
 
+.text-margin {
+  &.title-one + * {
+    margin-top: 32px;
+  }
+
+  &.title-two + *,
+  &.credits + * {
+    margin-top: 12px;
+  }
+
+  &.title-three + * {
+    margin-top: 10px;
+  }
+
+  &.credits + * {
+    margin-top: 12px;
+  }
+}
+
 .content {
   max-width: 1000px;
   width: 100%;
   padding: 30px;
-}
-
-.align-center,
-.align-justify,
-.align-left,
-.align-right {
-  display: block;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-justify {
-  text-align: justify;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
 }
 
 #root {

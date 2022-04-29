@@ -1,3 +1,5 @@
+@use "../styles.scss";
+
 .text {
   position: relative;
   font-family: "Roboto";
@@ -12,18 +14,8 @@
   }
 
   &.text-margin {
-    margin-bottom: 15px;
-
-    .title-one + & {
-      margin-bottom: 40px;
-    }
-
-    .title-two + & {
-      margin-bottom: 30px;
-    }
-
-    .title-three + & {
-      margin-bottom: 20px;
+    & + & {
+      margin-top: 0.5em;
     }
   }
 }

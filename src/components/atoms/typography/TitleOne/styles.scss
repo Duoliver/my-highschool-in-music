@@ -1,3 +1,5 @@
+@use "../styles.scss";
+
 .title-one {
   font-family: "Oswald", "Impact", sans-serif;
   font-style: normal;
@@ -22,11 +24,7 @@
     -webkit-text-stroke-width: 1px;
   }
 
-  &.break-word {
-    word-break: break-all;
-  }
-
-  &.text-margin {
-    margin-bottom: 40px;
+  .text + &.text-margin {
+    margin-top: 1em;
   }
 }

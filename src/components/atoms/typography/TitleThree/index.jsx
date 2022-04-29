@@ -1,18 +1,13 @@
 import React from "react";
-import { AlignEnum } from "../../../../enums";
+import { generateStyles, typographyDefaultProps } from "../utils";
 import "./styles.scss";
 
-const TitleThree = ({ children, align, textMargin }) => {
+const TitleThree = ({ children, ...props }) => {
   return (
-    <span className={`title-three ${align} ${textMargin && "text-margin"}`}>
-      {children}
-    </span>
+    <span className={`title-three ${generateStyles(props)}`}>{children}</span>
   );
 };
 
-TitleThree.defaultProps = {
-  align: AlignEnum.LEFT,
-  textMargin: false,
-};
+TitleThree.defaultProps = typographyDefaultProps;
 
 export default TitleThree;

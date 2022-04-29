@@ -13,7 +13,7 @@ const testAlbum = new Album(
   "CSS",
   2011,
   "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec sodales dolor. Vivamus nisi purus, eleifend id sollicitudin sit amet, blandit eu felis. Praesent sit amet ultrices mauris, id molestie nunc. Quisque dictum venenatis ullamcorper. Aliquam sed turpis ac nibh gravida vehicula ac vitae mauris. Donec non magna ante. Ut quis vulputate metus. Pellentesque lobortis ex a faucibus consectetur. Proin ut nisl pretium, viverra ligula non, varius massa. Morbi ac sem ligula. Aenean elementum orci libero, in eleifend nunc blandit id. Cras sed metus in lorem rhoncus vestibulum at sit amet arcu. Suspendisse a lectus tincidunt, mattis magna ac, facilisis neque. Sed facilisis dapibus nunc non luctus. \nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Aenean pharetra ante cursus ipsum vulputate sollicitudin. Integer rhoncus ipsum et cursus cursus.",
-  "https://lastfm.freetls.fastly.net/i/u/770x0/5e51d1f06e014a8697f39f8279940c3a.jpg#5e51d1f06e014a8697f39f8279940c3a",
+  "https://upload.wikimedia.org/wikipedia/en/6/6b/CSS_-_La_Liberaci%C3%B3n.png",
   ["Hits Me Like A Rock", "City Grrrl", "Yolanda"],
   testStream
 );
@@ -23,7 +23,7 @@ const differentAlbum = new Album(
   "Aphex Twin",
   1992,
   "Selected Ambient Works 85–92 is the debut studio album by Aphex Twin, the pseudonym of British electronic musician Richard D. James. It was released on 9 November 1992 through Apollo Records, a subsidiary of Belgian label R&S Records. The album consists of beat-orientated ambient tracks recorded onto cassette reputedly dating as far back as 1985, when James was thirteen to fourteen years old. An analogue remaster of the album was released in 2006, followed by a digital remaster in 2008.\n Upon its release, Selected Ambient Works 85–92 received widespread acclaim, and has been considered a landmark in the fields of electronica, ambient techno, and intelligent dance music. James followed up the album in 1994 with the more traditionally ambient Selected Ambient Works Volume II. In 2012, it was named the greatest album of the 1990s by Fact. It entered the UK Dance Albums Chart at number 30 after the release of Aphex Twin's 2014 album Syro.",
-  "https://lastfm.freetls.fastly.net/i/u/770x0/6f199a67803148cfb2cf2238b8fda0fb.jpg#6f199a67803148cfb2cf2238b8fda0fb",
+  "https://upload.wikimedia.org/wikipedia/en/8/82/Selected_Ambient_Works_85-92.png?20160731120429",
   ["Xtal", "Pulsewidth", "Ageispolis", "I", "Ptolemy"]
 );
 

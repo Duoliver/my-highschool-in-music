@@ -1,3 +1,5 @@
+@use "../styles.scss";
+
 .title-three {
   font-family: "Roboto";
   font-style: normal;
@@ -8,7 +10,7 @@
   color: black;
   margin-right: -0.15em;
 
-  &.text-margin {
-    margin-bottom: 20px;
+  .text + &.text-margin {
+    margin-top: 1em;
   }
 }
