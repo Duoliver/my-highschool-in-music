@@ -1,18 +1,11 @@
 import React from "react";
+import { generateStyles, typographyDefaultProps } from "../utils";
 import "./styles.scss";
 
-const Text = ({ children, align, textMargin, className }) => {
-  return (
-    <p className={`text ${align} ${textMargin && "text-margin"} ${className}`}>
-      {children}
-    </p>
-  );
+const Text = ({ children, ...props }) => {
+  return <p className={`text ${generateStyles(props)}`}>{children}</p>;
 };
 
-Text.defaultProps = {
-  textMargin: false,
-  align: "",
-  className: "",
-};
+Text.defaultProps = typographyDefaultProps;
 
 export default Text;

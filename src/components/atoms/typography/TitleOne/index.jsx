@@ -1,22 +1,13 @@
 import React from "react";
+import { generateStyles, typographyDefaultProps } from "../utils";
 import "./styles.scss";
 
-const TitleOne = ({ children, align, textMargin, small, breakWord }) => {
+const TitleOne = ({ children, ...props }) => {
   return (
-    <span
-      className={`title-one ${align} ${textMargin && "text-margin"} ${
-        small && "small"
-      } ${breakWord && "break-word"}`}
-    >
-      {children}
-    </span>
+    <span className={`title-one ${generateStyles(props)}`}>{children}</span>
   );
 };
 
-TitleOne.defaultProps = {
-  textMargin: false,
-  small: false,
-  breakWord: false,
-};
+TitleOne.defaultProps = typographyDefaultProps;
 
 export default TitleOne;

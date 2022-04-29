@@ -1,23 +1,13 @@
 import React from "react";
-import { AlignEnum } from "../../../../enums";
+import { generateStyles, typographyDefaultProps } from "../utils";
 import "./styles.scss";
 
-const TitleTwo = ({ children, align, textMargin, uppercase }) => {
+const TitleTwo = ({ children, ...props }) => {
   return (
-    <span
-      className={`title-two ${align} ${textMargin && "text-margin"} ${
-        uppercase && "uppercase"
-      }`}
-    >
-      {children}
-    </span>
+    <span className={`title-two ${generateStyles(props)}`}>{children}</span>
   );
 };
 
-TitleTwo.defaultProps = {
-  align: AlignEnum.LEFT,
-  uppercase: false,
-  textMargin: false,
-};
+TitleTwo.defaultProps = typographyDefaultProps;
 
 export default TitleTwo;
