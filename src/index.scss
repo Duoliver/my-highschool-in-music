@@ -29,7 +29,8 @@ main {
     margin-top: 32px;
   }
 
-  &.title-two + * {
+  &.title-two + *,
+  &.credits + * {
     margin-top: 12px;
   }
 
