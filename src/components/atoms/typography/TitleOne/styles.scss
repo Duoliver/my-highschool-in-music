@@ -24,11 +24,7 @@
     -webkit-text-stroke-width: 1px;
   }
 
-  &.break-word {
-    word-break: break-all;
-  }
-
   .text + &.text-margin {
-    margin-top: 32px;
+    margin-top: 1em;
   }
 }
