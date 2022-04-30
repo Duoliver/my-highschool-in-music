@@ -13,4 +13,18 @@
   & > button {
     flex-shrink: 0;
   }
+
+  & > .header-second-title {
+    display: none;
+  }
+
+  @media screen and (max-width: 670px) {
+    & > .header-second-title {
+      display: unset;
+    }
+
+    & > .header-first-title {
+      display: none;
+    }
+  }
 }
