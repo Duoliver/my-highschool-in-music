@@ -11,4 +11,5 @@ export const SmallButtonVariantEnum = {
   ARROW_RIGHT: "ARROW_RIGHT",
   ARROW_DOWN: "ARROW_DOWN",
   ARROW_LEFT: "ARROW_LEFT",
+  PLAY: "PLAY",
 };

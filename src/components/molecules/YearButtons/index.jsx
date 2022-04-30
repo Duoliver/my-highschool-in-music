@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import routes from "../../../routes";
 
 import { SquareButton } from "../../atoms/Buttons";
 
@@ -17,7 +18,7 @@ const YearButtons = ({ current }) => {
           <SquareButton
             disabled={Number(current) === year}
             key={Math.random()}
-            onClick={() => navigate(`/year/${year}`)}
+            onClick={() => navigate(`${routes.YEAR_ROOT}/${year}`)}
           >
             {`\`${year}`}
           </SquareButton>

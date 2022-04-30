@@ -17,6 +17,4 @@ const Cross = () => {
   );
 };
 
-Cross.defaultProps = {};
-
 export default Cross;
