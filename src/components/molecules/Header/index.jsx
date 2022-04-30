@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { SmallButtonVariantEnum } from "../../../enums";
 import routes from "../../../routes";
@@ -10,8 +10,19 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const atMain = location.pathname === routes.MAIN;
+
+  const isSticky = (e) => {
+    const header = document.getElementById("header");
+    if (window.pageYOffset >= window.innerHeight) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+
   const getButton = useCallback(() => {
-    if (location.pathname === routes.MAIN) {
+    if (atMain) {
       return (
         <SmallButton
           variant={SmallButtonVariantEnum.PLAY}
@@ -25,7 +36,16 @@ const Header = () => {
         onClick={() => navigate(routes.MAIN)}
       />
     );
-  }, [location.pathname, navigate]);
+  }, [atMain, navigate]);
+
+  useEffect(() => {
+    if (atMain) {
+      window.addEventListener("scroll", isSticky);
+    }
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, [atMain]);
 
   return (
     <header className="header" id="header">
