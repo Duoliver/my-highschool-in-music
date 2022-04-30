@@ -48,7 +48,7 @@ const Header = () => {
   }, [atMain]);
 
   return (
-    <header className="header" id="header">
+    <header className={`header ${!atMain ? "sticky" : ""}`} id="header">
       {getButton()}
       <TitleTwo className="header-first-title" uppercase>
         Meu Colegial Em Música 2017-2021/1
