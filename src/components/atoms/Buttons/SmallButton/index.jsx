@@ -1,7 +1,7 @@
 import React from "react";
 import { SmallButtonVariantEnum } from "../../../../enums";
 import "./styles.scss";
-import { Cross, Arrow } from "../../../svgs";
+import { Cross, Arrow, Play } from "../../../svgs";
 
 const SmallButton = ({ onClick, variant, disabled }) => {
   return (
@@ -13,6 +13,7 @@ const SmallButton = ({ onClick, variant, disabled }) => {
 
 const iconVariants = {
   [SmallButtonVariantEnum.CROSS]: <Cross />,
+  [SmallButtonVariantEnum.PLAY]: <Play />,
   [SmallButtonVariantEnum.ARROW_UP]: <Arrow point="up" />,
   [SmallButtonVariantEnum.ARROW_RIGHT]: <Arrow point="right" />,
   [SmallButtonVariantEnum.ARROW_DOWN]: <Arrow point="down" />,
