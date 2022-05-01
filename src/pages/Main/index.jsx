@@ -4,6 +4,7 @@ import { Text, TitleOne, TitleTwo } from "../../components/atoms/typography";
 import { YearButtons } from "../../components/molecules";
 import { Arrow, LogoPortuguese } from "../../components/svgs";
 import { AlignEnum } from "../../enums";
+import { isFirefox } from "../../utils";
 
 import "./styles.scss";
 
@@ -23,7 +24,7 @@ const Main = () => {
       </section>
       <section className="info" id="info">
         <div className="content">
-          <TitleOne align={AlignEnum.RIGHT} textMargin>
+          <TitleOne align={AlignEnum.RIGHT} breakWord={isFirefox} textMargin>
             `17-`21
           </TitleOne>
           <TitleTwo align={AlignEnum.RIGHT} textMargin>
