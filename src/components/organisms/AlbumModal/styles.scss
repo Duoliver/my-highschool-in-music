@@ -29,6 +29,10 @@
 
   & > .text-area {
     grid-area: text;
+
+    & > .text-area-list-title {
+      margin-top: 30px;
+    }
   }
 
   & > .page-area {

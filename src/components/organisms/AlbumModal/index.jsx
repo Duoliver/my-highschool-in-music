@@ -66,7 +66,11 @@ const AlbumModal = ({
               {paragraph}
             </Text>
           ))}
-          <TitleThree align={AlignEnum.LEFT} textMargin>
+          <TitleThree
+            align={AlignEnum.LEFT}
+            className="text-area-list-title"
+            textMargin
+          >
             MINHAS FAVORITAS
           </TitleThree>
           <List>
