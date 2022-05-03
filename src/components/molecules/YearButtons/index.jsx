@@ -3,24 +3,30 @@ import { useNavigate } from "react-router-dom";
 import routes from "../../../routes";
 
 import { SquareButton } from "../../atoms/Buttons";
+import { Small17, Small18, Small19, Small20 } from "../../svgs";
 
 import "./styles.scss";
 
 const YearButtons = ({ current }) => {
   const navigate = useNavigate();
 
-  const years = [17, 18, 19, 20];
+  const years = {
+    17: <Small17 />,
+    18: <Small18 />,
+    19: <Small19 />,
+    20: <Small20 />,
+  };
 
   return (
     <menu className="year-buttons">
-      {years.map((year) => {
+      {Object.keys(years).map((year) => {
         return (
           <SquareButton
-            disabled={Number(current) === year}
+            disabled={current === year}
             key={Math.random()}
             onClick={() => navigate(`${routes.YEAR_ROOT}/${year}`)}
           >
-            {`\`${year}`}
+            {years[year]}
           </SquareButton>
         );
       })}
