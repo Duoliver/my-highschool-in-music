@@ -71,7 +71,7 @@ const AlbumModal = ({
             className="text-area-list-title"
             textMargin
           >
-            MINHAS FAVORITAS
+            {album.favouriteSongs.length ? "MINHAS FAVORITAS" : "SINGLE"}
           </TitleThree>
           <List>
             {album.favouriteSongs.map((song) => (
