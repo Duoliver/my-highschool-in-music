@@ -1,4 +1,5 @@
 import { Album, Stream, YearData } from "./classes";
+import { year17 } from "./years/year17";
 
 const testStream = [
   new Stream(
@@ -50,7 +51,6 @@ const getTestYear = (year) => {
   );
 };
 
-const year17 = getTestYear("2017");
 const year18 = getTestYear("2018");
 const year19 = getTestYear("2019");
 const year20 = getTestYear("2020-21");
