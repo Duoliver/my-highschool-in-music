@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-str */
 import { Album, YearData } from "../../classes";
 
 const albums17 = [
@@ -5,7 +6,19 @@ const albums17 = [
     "(What's The Story) Morning Glory?",
     "Oasis",
     1995,
-    "A ideia que eu tinha do Oasis antes de conhecer a banda era de que era algo que gente legal gostava. Eu tinha vagas memórias de menções ao tal grupo de Manchester que datavam antes de eu começar a escutá-los. Partia de algo mais recente, de algum colega do curso de inglês que frequentei em 2015, até informações emboladas na minha cabeça que me diziam que a banda era brasileira e que, quando vinha o nome em mente, o brinde era uma imagem do Queen.\nFoi só no final de 2016 que eu comecei a ir atrás da música dos caras. A exagerada epicidade de Champagne Supernova entediou, no primeiro momento, o Douglas que curtia um som mais enérgico. Mas ele foi cativado à medida que ia escutando. Acho que entrei em 2017 com ela sendo uma das minhas músicas favoritas.\nApós conhecer algumas faixas do primeiro disco e me certificar de que era uma banda de rock que fazia meu tipo, voltei meus ouvidos ao material daqui, que foi crescendo em mim. Fui encantado por desde as mais famosas e menos cruas como Wonderwall e Don’t Look Back in Anger, até às mais subestimadas e com mais guitarras como Hello, Hey Now, Morning Glory e Some Might Say, essa última que foi minha favorita por um bom tempo durante 2017. Quando percebi, já havia se tornado meu disco favorito, e assim se manteve até o ano seguinte.",
+    "A ideia que eu tinha do Oasis antes de conhecer a banda era de que era algo que gente legal gostava. \
+    Eu tinha vagas memórias de menções ao tal grupo de Manchester que datavam antes de eu começar a escutá-los. \
+    Partia de algo mais recente, de algum colega do curso de inglês que frequentei em 2015, \
+    até informações emboladas na minha cabeça que me diziam que a banda era brasileira e que, quando vinha o nome em mente, \
+    o brinde era uma imagem do Queen.\n\
+    Foi só no final de 2016 que eu comecei a ir atrás da música dos caras. \
+    A exagerada epicidade de Champagne Supernova entediou, no primeiro momento, o Douglas que curtia um som mais enérgico. \
+    Mas ele foi cativado à medida que ia escutando. Acho que entrei em 2017 com ela sendo uma das minhas músicas favoritas.\n\
+    Após conhecer algumas faixas do primeiro disco e me certificar de que era uma banda de rock que fazia meu tipo, \
+    voltei meus ouvidos ao material daqui, que foi crescendo em mim. \
+    Fui encantado por desde as mais famosas e menos cruas como Wonderwall e Don’t Look Back in Anger, até às mais subestimadas e com mais guitarras \
+    como Hello, Hey Now, Morning Glory e Some Might Say, essa última que foi minha favorita por um bom tempo durante 2017. \
+    Quando percebi, já havia se tornado meu disco favorito, e assim se manteve até o ano seguinte.",
     "https://upload.wikimedia.org/wikipedia/en/b/b1/Oasis_-_%28What%27s_The_Story%29_Morning_Glory_album_cover.jpg",
     [
       "Hello",
@@ -24,7 +37,13 @@ const albums17 = [
     1994,
     "",
     "https://upload.wikimedia.org/wikipedia/en/d/d4/OasisDefinitelyMaybealbumcover.jpg",
-    [],
+    [
+      "Live Forever",
+      "Up in the Sky",
+      "Supersonic",
+      "Bring It on Down",
+      "Slide Away",
+    ],
     []
   ),
   new Album(
@@ -76,7 +95,12 @@ const albums17 = [
     "Mr. Brightside",
     "The Killers",
     2003,
-    "",
+    "Era começo do ano e eu estava explorando, a lentos passos, as músicas que o algoritmo do YouTube recomendava. \
+    Eu queria conhecer Franz Ferdinand, mas depois da segunda música deles, dei falta de uma terceira na listinha de clipes à direita do player. \
+    Mas lá no topo estava Mr. Brightside do The Killers, banda essa que eu não tinha nem ouvido falar ainda. \
+    Tinha curtido, apesar do clipe que deixou o jovem puritano que eu era levemente incomodado. A segunda vez que eu escutei foi involuntária. \
+    Estava eu no finalzinho de uma live de uma youtuber que eu gostava (até demais) e tocou essa enquanto ela se despedia. \
+    Desde então, levei a música comigo (e depois a banda). Segundo o Wrapped, foi a faixa que eu mais escutei em 2017 e 2019 no Spotify.",
     "https://upload.wikimedia.org/wikipedia/en/d/d1/Mr.-Brightside.jpg",
     [],
     []
