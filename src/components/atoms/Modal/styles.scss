@@ -10,7 +10,7 @@
   height: 100%;
   overflow: auto;
   padding: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--overlay);
 
   .default-padding {
     padding: 30px;
