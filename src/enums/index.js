@@ -13,3 +13,8 @@ export const SmallButtonVariantEnum = {
   ARROW_LEFT: "ARROW_LEFT",
   PLAY: "PLAY",
 };
+
+export const ThemeEnum = {
+  DEFAULT: "DEFAULT",
+  DARK: "DARK",
+};

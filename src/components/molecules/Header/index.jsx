@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import { SmallButtonVariantEnum } from "../../../enums";
+import { SmallButtonVariantEnum, ThemeEnum } from "../../../enums";
 import routes from "../../../routes";
+import { change } from "../../../store/slices/themePickerSlicer";
 import { SmallButton } from "../../atoms/Buttons";
 import { TitleTwo } from "../../atoms/typography";
 import "./styles.scss";
@@ -9,6 +11,8 @@ import "./styles.scss";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.themePicker.theme);
 
   const atMain = location.pathname === routes.MAIN;
 
@@ -38,6 +42,12 @@ const Header = () => {
     );
   }, [atMain, navigate]);
 
+  const handleThemeChange = useCallback(() => {
+    const nextTheme =
+      theme === ThemeEnum.DEFAULT ? ThemeEnum.DARK : ThemeEnum.DEFAULT;
+    dispatch(change(nextTheme));
+  }, [dispatch, theme]);
+
   useEffect(() => {
     if (atMain) {
       window.addEventListener("scroll", isSticky);
@@ -50,6 +60,7 @@ const Header = () => {
   return (
     <header className={`header ${!atMain ? "sticky" : ""}`} id="header">
       {getButton()}
+      <SmallButton onClick={() => handleThemeChange()} />
       <TitleTwo className="header-first-title" uppercase>
         Meu Colegial Em Música 2017-2021/1
       </TitleTwo>
