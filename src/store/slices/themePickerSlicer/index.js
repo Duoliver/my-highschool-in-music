@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ThemeEnum } from "../../../enums";
+import changeTheme from "./changeTheme";
 
 export const themePickerSlicer = createSlice({
   name: "themePicker",
@@ -8,7 +9,9 @@ export const themePickerSlicer = createSlice({
   },
   reducers: {
     change: (state, action) => {
-      state.value = action.payload;
+      const themeName = action.payload;
+      state.theme = themeName;
+      changeTheme(themeName);
     },
   },
 });
