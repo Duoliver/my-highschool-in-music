@@ -18,7 +18,7 @@ const Header = () => {
 
   const isSticky = (e) => {
     const header = document.getElementById("header");
-    if (window.pageYOffset >= window.innerHeight) {
+    if (window.pageYOffset >= window.innerHeight * 0.5) {
       header.classList.add("sticky");
     } else {
       header.classList.remove("sticky");
