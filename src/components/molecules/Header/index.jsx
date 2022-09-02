@@ -59,12 +59,19 @@ const Header = () => {
 
   return (
     <header className={`header ${!atMain ? "sticky" : ""}`} id="header">
-      {getButton()}
-      <SmallButton onClick={() => handleThemeChange()} />
-      <TitleTwo className="header-first-title" uppercase>
-        Meu Colegial Em Música 2017-2021/1
-      </TitleTwo>
-      <TitleTwo className="header-second-title">`17-`21</TitleTwo>
+      <div className="left">
+        {getButton()}
+        <TitleTwo className="header-first-title" uppercase>
+          Meu Colegial Em Música 2017-2021/1
+        </TitleTwo>
+        <TitleTwo className="header-second-title">`17-`21</TitleTwo>
+      </div>
+      <div>
+        <SmallButton
+          variant={SmallButtonVariantEnum.SUN_MOON}
+          onClick={() => handleThemeChange()}
+        />
+      </div>
     </header>
   );
 };
