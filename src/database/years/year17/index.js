@@ -6,7 +6,7 @@ const albums17 = [
     "(What's The Story) Morning Glory?",
     "Oasis",
     1995,
-    "A ideia que eu tinha do Oasis antes de conhecer a banda era de que era algo que gente legal gostava. \
+    "A ideia que eu tinha do Oasis antes de conhecer a banda era de que fosse algo que gente legal gostava. \
     Eu tinha vagas memórias de menções ao tal grupo de Manchester que datavam antes de eu começar a escutá-los. \
     Partia de algo mais recente, de algum colega do curso de inglês que frequentei em 2015, \
     até informações emboladas na minha cabeça que me diziam que a banda era brasileira e que, quando vinha o nome em mente, \
