@@ -10,9 +10,9 @@
   margin-right: -0.42em;
   -webkit-text-stroke-width: 2px;
 
-  color: black;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-color: black;
+  color: var(--color);
+  -webkit-text-fill-color: var(--background);
+  -webkit-text-stroke-color: var(--color);
 
   @media screen and (max-width: 400px) {
     word-break: break-all;

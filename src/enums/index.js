@@ -12,4 +12,14 @@ export const SmallButtonVariantEnum = {
   ARROW_DOWN: "ARROW_DOWN",
   ARROW_LEFT: "ARROW_LEFT",
   PLAY: "PLAY",
+  SUN_MOON: "SUN_MOON",
+};
+
+export const ThemeEnum = {
+  DEFAULT: "DEFAULT",
+  DARK: "DARK",
+};
+
+export const LocalStorageEnum = {
+  THEME: "theme",
 };
