@@ -18,3 +18,7 @@ export const ThemeEnum = {
   DEFAULT: "DEFAULT",
   DARK: "DARK",
 };
+
+export const LocalStorageEnum = {
+  THEME: "theme",
+};
