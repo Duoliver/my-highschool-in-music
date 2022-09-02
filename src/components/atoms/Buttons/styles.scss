@@ -10,17 +10,19 @@ button {
   cursor: pointer;
 }
 
-button:hover:not([disabled]) {
-  background-color: var(--color);
-  & > .title-one {
-    -webkit-text-fill-color: var(--color);
-    -webkit-text-stroke-color: var(--background);
-  }
-  & > span {
-    color: var(--background);
-  }
-  svg {
-    color: var(--background);
+@media (hover: hover) and (pointer: fine) {
+  button:hover:not([disabled]) {
+    background-color: var(--color);
+    & > .title-one {
+      -webkit-text-fill-color: var(--color);
+      -webkit-text-stroke-color: var(--background);
+    }
+    & > span {
+      color: var(--background);
+    }
+    svg {
+      color: var(--background);
+    }
   }
 }
 
