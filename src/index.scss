@@ -4,15 +4,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+svg {
+  transition-duration: 0.05s;
 }
 
 html {
   scroll-behavior: smooth;
+
+  --background: white;
+  --color: black;
+  --overlay: #00000080;
 }
 
 body {
   height: 100vh;
   width: 100%;
+  background-color: var(--background);
 }
 
 main {
