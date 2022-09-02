@@ -1,12 +1,13 @@
 @use "../styles.scss";
 
 .title-three {
-  font-family: "Roboto";
+  font-family: "Roboto Mono", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0.15em;
+  text-transform: uppercase;
   color: var(--color);
   margin-right: -0.15em;
 
