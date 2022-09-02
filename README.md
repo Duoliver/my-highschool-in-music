@@ -18,11 +18,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Year screen
 * Album screen
 * Header
+* Dark theme
 
 ### To do
 
 * Footer
-* Dark theme
 * "Play album" button
 * Home screen text
 * Years and albums data
