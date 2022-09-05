@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { AlignEnum } from "../../../enums";
 import { isFirefox } from "../../../utils";
 import AlbumCover from "../../atoms/AlbumCover";
-import { WideButton } from "../../atoms/Buttons";
 import List from "../../atoms/List";
 import Modal from "../../atoms/Modal";
 import { Text, TitleOne, TitleThree, TitleTwo } from "../../atoms/typography";
@@ -58,7 +57,18 @@ const AlbumModal = ({
           </Text>
         </div>
         <div className="play-area">
-          <WideButton disabled>REPRODUZIR</WideButton>
+          <iframe
+            title="Player"
+            style={{ borderRadius: 0 }}
+            src={`https://open.spotify.com/embed/album/${album.streamingServices[0].id}?utm_source=generator&theme=0`}
+            width="100%"
+            height="80"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <Text>Escutar em outra plataforma</Text>
         </div>
         <div className="text-area">
           {album.text.split("\n").map((paragraph) => (
@@ -73,13 +83,7 @@ const AlbumModal = ({
           >
             MINHAS FAVORITAS
           </TitleThree>
-          <List>
-            {album.favouriteSongs.map((song) => (
-              <li key={Math.random()}>
-                <Text align={AlignEnum.LEFT}>{song}</Text>
-              </li>
-            ))}
-          </List>
+          <List items={album.favouriteSongs} />
         </div>
         <div className="page-area">
           <Paginator

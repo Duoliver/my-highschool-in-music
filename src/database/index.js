@@ -1,11 +1,9 @@
+import { StreamEnum } from "../enums";
 import { Album, Stream, YearData } from "./classes";
 
 const testStream = [
-  new Stream(
-    "Plataform 1",
-    "https://open.spotify.com/album/1W9IHb4ld1ZtAD9rlKgiOh?si=qioGFGNjSImZlmS3-ZrJHg"
-  ),
-  new Stream("Plataform 2", "https://deezer.page.link/6pjxv3rRBNkZwMwBA"),
+  new Stream(StreamEnum.SPOTIFY, "1W9IHb4ld1ZtAD9rlKgiOh"),
+  new Stream(StreamEnum.DEEZER, "6762758"),
 ];
 
 const testAlbum = new Album(
@@ -24,7 +22,8 @@ const differentAlbum = new Album(
   1992,
   "Selected Ambient Works 85–92 is the debut studio album by Aphex Twin, the pseudonym of British electronic musician Richard D. James. It was released on 9 November 1992 through Apollo Records, a subsidiary of Belgian label R&S Records. The album consists of beat-orientated ambient tracks recorded onto cassette reputedly dating as far back as 1985, when James was thirteen to fourteen years old. An analogue remaster of the album was released in 2006, followed by a digital remaster in 2008.\n Upon its release, Selected Ambient Works 85–92 received widespread acclaim, and has been considered a landmark in the fields of electronica, ambient techno, and intelligent dance music. James followed up the album in 1994 with the more traditionally ambient Selected Ambient Works Volume II. In 2012, it was named the greatest album of the 1990s by Fact. It entered the UK Dance Albums Chart at number 30 after the release of Aphex Twin's 2014 album Syro.",
   "https://upload.wikimedia.org/wikipedia/en/8/82/Selected_Ambient_Works_85-92.png?20160731120429",
-  ["Xtal", "Pulsewidth", "Ageispolis", "I", "Ptolemy"]
+  ["Xtal", "Pulsewidth", "Ageispolis", "I", "Ptolemy"],
+  [new Stream(StreamEnum.SPOTIFY, "7aNclGRxTysfh6z0d8671k")]
 );
 
 const albumList = [

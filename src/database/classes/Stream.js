@@ -1,7 +1,7 @@
 class Stream {
-  constructor(name, url) {
+  constructor(name, id) {
     this.name = name;
-    this.url = url;
+    this.id = id;
   }
 }
 

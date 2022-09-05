@@ -23,3 +23,12 @@ export const ThemeEnum = {
 export const LocalStorageEnum = {
   THEME: "theme",
 };
+
+export const StreamEnum = {
+  SPOTIFY: "Spotify",
+  DEEZER: "Deezer",
+  APPLE: "Apple Music",
+  BANDCAMP: "Bandcamp",
+  YOUTUBE: "Youtube Music",
+  LASTFM: "Last.fm",
+};
