@@ -8,20 +8,21 @@ button {
   background-color: var(--background);
   color: var(--color);
   cursor: pointer;
-}
 
-@media (hover: hover) and (pointer: fine) {
-  button:hover:not([disabled]) {
-    background-color: var(--color);
-    & > .title-one {
-      -webkit-text-fill-color: var(--color);
-      -webkit-text-stroke-color: var(--background);
-    }
-    & > span {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not([disabled]) {
+      background-color: var(--color);
       color: var(--background);
-    }
-    svg {
-      color: var(--background);
+      & > .title-one {
+        -webkit-text-fill-color: var(--color);
+        -webkit-text-stroke-color: var(--background);
+      }
+      & > span {
+        color: var(--background);
+      }
+      svg {
+        color: var(--background);
+      }
     }
   }
 }

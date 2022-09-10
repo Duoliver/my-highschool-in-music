@@ -1,5 +1,6 @@
 import Arrow from "./Arrow";
 import Cross from "./Cross";
+import ExternalReference from "./ExternalReference";
 import LogoEnglish from "./LogoEnglish";
 import LogoPortuguese from "./LogoPortuguese";
 import Play from "./Play";
@@ -20,4 +21,5 @@ export {
   Small19,
   Small20,
   SunMoon,
+  ExternalReference,
 };

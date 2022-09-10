@@ -1,10 +1,16 @@
 import React, { useRef } from "react";
 import { AlignEnum } from "../../../enums";
 import { isFirefox } from "../../../utils";
-import AlbumCover from "../../atoms/AlbumCover";
-import List from "../../atoms/List";
-import Modal from "../../atoms/Modal";
-import { Text, TitleOne, TitleThree, TitleTwo } from "../../atoms/typography";
+import {
+  AlbumCover,
+  LinkButton,
+  List,
+  Modal,
+  Text,
+  TitleOne,
+  TitleThree,
+  TitleTwo,
+} from "../../atoms";
 import { Paginator } from "../../molecules";
 
 import "./styles.scss";
@@ -68,7 +74,7 @@ const AlbumModal = ({
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-          <Text>Escutar em outra plataforma</Text>
+          <LinkButton>Escutar em outra plataforma</LinkButton>
         </div>
         <div className="text-area">
           {album.text.split("\n").map((paragraph) => (
